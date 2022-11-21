@@ -1,0 +1,41 @@
+#nav-list{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    padding: 20px;
+    list-style: none;
+    font-weight: bold;
+    position: absolute;
+    background: transparent;
+    color: white;
+    right: 0;
+    left: 0;
+}
+
+#pancake-button:hover{
+    cursor: pointer;
+}
+
+#pancake-menu-button{
+    width: 20px;
+    padding-right: 5px;
+}
+
+#pancake-menu-button:hover{
+    cursor: pointer;
+}
+
+.css-menu-bar {
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin: 2px 0px 0px 0px;
+    background: #fff;
+    border-radius: 60px;
+}
+
+#bg-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
