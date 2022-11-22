@@ -4,7 +4,15 @@ const nav = $("nav")[0]
 const entryDiv = $("#entry-div")[0]
 const projectsButton = $("#entry-div a")[0]
 const introSection = $("#intro-section")[0]
-hamburgerButton[0].addEventListener('click', e => {
+
+const navItems = [...$("nav ul li a")];
+navItems.forEach(link => {
+    link.addEventListener('click', toggleNav)
+});
+
+hamburgerButton[0].addEventListener('click', toggleNav);
+
+function toggleNav(){
     if(navShown){
         nav.style.top = "-110vh";
         entryDiv.appendChild(projectsButton)
@@ -17,8 +25,7 @@ hamburgerButton[0].addEventListener('click', e => {
     
     changeHamburgerMenuAppearance(navShown);
     navShown = !navShown;
-    
-});
+}
 
 function changeHamburgerMenuAppearance(toX){
     const hamburgerPatties = $(".css-menu-bar")

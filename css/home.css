@@ -56,9 +56,10 @@ a:hover + .rectangle + .highlighter{
 /* SUBSECTION - DONE */
 
 nav{
+    z-index: 2;
     top: -110vh;
     height: calc(100vh - 3rem);
-    position: absolute;
+    position: fixed;
     width: 100%;
     transition: top 1s ease-in-out;
 }
@@ -79,6 +80,7 @@ nav ul li{
     width:  100%;
     text-align: center;
     position: relative;
+    
 }
 
 nav ul li a{
@@ -103,6 +105,12 @@ nav ul li a{
     color: white;
     right: 0;
     left: 0;
+    z-index: 2;
+}
+
+#top-bar div{
+    position: fixed;
+    right: 20px;
 }
 
 #pancake-button:hover{
