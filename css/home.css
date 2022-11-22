@@ -1,9 +1,72 @@
-nav ul{
-    background-color: rgba(71, 26, 138, 0.75);
+/* Dropdown Nav Menu */
+
+/* SUBSECTION - Pretty stuff on the links */
+.rectangle{
     position: absolute;
+    pointer-events: none;
+    left: 0;
     top: 0;
-    bottom: 0;
     width: 100%;
+}
+
+.path{
+    height: 50%;
+    width: 100%;
+    stroke: transparent;
+}
+
+a:hover + .rectangle .path{
+    stroke: #fff;
+    animation: dash 5s linear;
+    animation: fill 5s linear;
+}
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 1000;
+    }
+  }
+
+  @keyframes fill {
+    from{
+        stroke-dasharray: 100;
+    }
+    to {
+        stroke-dasharray: 10000;
+    }
+  }
+  
+.highlighter{
+    width: 0;
+    height: calc(100% - 4px);
+}
+
+a:hover + .rectangle + .highlighter{
+    background: rgba(0, 0, 0, 0.4);
+    transition: width 1s ease-in-out;
+    width: calc(100% - 8px);
+    height: calc(100% - 4px);
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 0px;
+    margin: 4px 4px 0 4px;
+}
+
+/* SUBSECTION - DONE */
+
+nav{
+    top: -110vh;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    transition: top 1s ease-in-out;
+}
+
+nav ul{
+    background-color: rgba(71, 26, 138, 0.5);
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -15,6 +78,7 @@ nav ul{
 nav ul li{
     width:  100%;
     text-align: center;
+    position: relative;
 }
 
 nav ul li a{
@@ -46,7 +110,7 @@ nav ul li a{
 }
 
 #pancake-menu-button{
-    width: 20px;
+    width: 30px;
     padding-right: 5px;
 }
 
@@ -56,11 +120,14 @@ nav ul li a{
 
 .css-menu-bar {
     display: block;
-    height: 5px;
+    height: 8px;
     width: 100%;
     margin: 2px 0px 0px 0px;
     background: #fff;
     border-radius: 60px;
+    position: relative;
+    transition: top 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 /* Hero Image */
