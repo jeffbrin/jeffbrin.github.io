@@ -15,11 +15,12 @@ hamburgerButton[0].addEventListener('click', toggleNav);
 function toggleNav(){
     if(navShown){
         nav.style.top = "-110vh";
-        entryDiv.appendChild(projectsButton)
+        projectsButton.style.top = "50vh";
     }
     else{
         nav.style.top = 0;
-        entryDiv.removeChild(projectsButton)
+        projectsButton.style.top = "-100vh";
+
     }
 
     
