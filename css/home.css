@@ -132,15 +132,25 @@ nav ul li a{
 
 /* Hero Image */
 
-#bg-img{
-    z-index: -1;
+.bg-img{
+    z-index: -2;
     position: absolute;
     top: 0;
     object-fit: cover;
     width: 100%;
     height: 100vh;
-    background-color:  rgba(0, 0, 0, 0.9);
 }
+
+.bg-img-gradient{
+    z-index: -1;
+    position: absolute;
+    top: 50vh;
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    background-image:  linear-gradient(transparent, var(--background));
+}
+
 
 /* Projects button */
 #entry-div{
@@ -184,20 +194,53 @@ h1{
     margin-top: 2rem;
 }
 
-.project-container{
+.project-info-container{
+    position: relative;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    margin: auto;
-    padding: 50px;
     margin: 50px auto;
-    width: 75%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    background: #111;
-    border-radius: 20%;
-    border: 4px solid white;
     gap: 50px;
+    margin-bottom: 500px;
 }
+
+.project-container{
+    position: relative;
+    width: 100%;
+}
+
+.project-container .bg-img{
+    position: absolute;
+    top: calc(100% + 50px);
+    height: 400px;
+    width: 100%;
+}
+
+.project-container .bg-image-gradients{
+    position: absolute;
+    top: calc(100% + 50px);
+    width: 100%;
+    height: 400px;
+}
+
+.project-container .bg-image-gradients div:nth-of-type(1){
+    position: absolute;
+    background-image: linear-gradient(var(--background), transparent);
+    height: 200px;
+    top: 0;
+}
+
+.project-container .bg-image-gradients div:nth-of-type(2){
+    position: absolute;
+    background-image: linear-gradient(transparent, var(--background));
+    height: 200px;
+    top: 50%;
+}
+
 
 .project-link{
     color: white;
@@ -206,28 +249,26 @@ h1{
     transition: color 750ms ease-in-out;
 }
 
-.project-details-container{
-    display: flex;
+.title-div{
     width: 100%;
-    gap: 50px;
 }
 
-.project-image-container{
-    flex: 1;
+h2{
+    border-radius: 10px 10px 0 0;
+    background: rgba(255, 255, 255, 0.05);
+    width: calc(100%-20px);
+    padding: 20px;
 }
 
-.project-description-container{
-    flex: 1;
-}
-
-.project-description-container p{
-    height: 100%;
-}
-
-.project-image-container img{
+.project-image{
     height: 100%;
     width: 100%;
+    /* max-width: 750px; */
     object-fit: contain;
-    border-radius: 20%;
-    border: solid white 5px;
+    border-radius: 0 0 10px 10px;
 }
+
+@media screen and (max-width: 800px) {
+    body{
+    }
+  }

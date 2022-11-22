@@ -4,10 +4,13 @@
     padding: 0;
     font-family: 'Space Mono', monospace;
     scroll-behavior: smooth;
+    --background: 	#4d8d96;
+    --raised: rgb(0, 0, 50)
 }
 
+
 body{
-    background: rgb(0, 0, 20);
+    background: var(--background);
     /* z-index: -1; */
 }
 
