@@ -16,54 +16,112 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <script src="./src/hamburger-menu.js" defer></script>
+    <script src="./src/project-links.js" defer></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="./projects.html">Projects</a><svg class="rectangle">
-                    <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
-                </svg>
-                <div class="highlighter"></div>
-            </li>
-            <li><a href="./about.html">About</a><svg class="rectangle">
-                    <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
-                </svg>
-                <div class="highlighter"></div>
-            </li>
-            <li><a href="./skills.html">Skills</a><svg class="rectangle">
-                    <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
-                </svg>
-                <div class="highlighter"></div>
-            </li>
-            <li><a href="./timeline.html">Timeline</a><svg class="rectangle">
-                    <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
-                </svg>
-                <div class="highlighter"></div>
-            </li>
-            <li>
+    <section id="intro-section">
+        <nav>
+            <ul>
+                <li><a href="#projects-section">Projects</a><svg class="rectangle">
+                        <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
+                    </svg>
+                    <div class="highlighter"></div>
+                </li>
+                <li><a href="./about.html">About</a><svg class="rectangle">
+                        <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
+                    </svg>
+                    <div class="highlighter"></div>
+                </li>
+                <li><a href="./skills.html">Skills</a><svg class="rectangle">
+                        <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
+                    </svg>
+                    <div class="highlighter"></div>
+                </li>
+                <li><a href="./timeline.html">Timeline</a><svg class="rectangle">
+                        <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
+                    </svg>
+                    <div class="highlighter"></div>
+                </li>
+                <li>
 
-                <a href="./Resume.pdf" target="_blank">Resume</a>
-                <svg class="rectangle">
-                    <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
-                </svg>
-                <div class="highlighter"></div>
-            </li>
+                    <a href="./Resume.pdf" target="_blank">Resume</a>
+                    <svg class="rectangle">
+                        <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
+                    </svg>
+                    <div class="highlighter"></div>
+                </li>
+            </ul>
+        </nav>
+        <ul id="top-bar">
+            <li>Jeffrey Bringolf</li>
+            <div id="pancake-menu-button">
+                <span class="css-menu-bar"></span>
+                <span class="css-menu-bar"></span>
+                <span class="css-menu-bar"></span>
+            </div>
         </ul>
-    </nav>
-    <ul id="top-bar">
-        <li>Jeffrey Bringolf</li>
-        <div id="pancake-menu-button">
-            <span class="css-menu-bar"></span>
-            <span class="css-menu-bar"></span>
-            <span class="css-menu-bar"></span>
+        <img id="bg-img" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/19a20516314921.562a9acee8f6a.gif"
+            alt="tech background">
+        <div id="entry-div">
+            <a class="hero-button" href="#projects-section">To Projects</a>
         </div>
-    </ul>
-    <img id="bg-img" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/19a20516314921.562a9acee8f6a.gif"
-        alt="tech background">
-    <div id="entry-div">
-        <button class="hero-button">To Projects</button>
-    </div>
+    </section>
+    <section id="projects-section">
+        <h1>Projects</h1>
+        <div class="project-container">
+            <h2>Mind Flayer's Atheneum</h2>
+            <div class="project-details-container">
+                <div class="project-image-container"><img src="img/mind-flayers-atheneum.png"
+                        alt="Mind Flayer's Atheneum - Dungeons and Dragons website."></div>
+                <div class="project-description-container">
+                    <p>This is a project description Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                        qui tempora ipsam? Temporibus quos vel reprehenderit numquam maiores. Laborum eos velit
+                        aspernatur amet voluptas cumque accusantium optio iste nihil repudiandae?</p>
+                </div>
+            </div>
+            <a class="project-link" href="https://github.com/jeffbrin/DungeonsAndDragons_CharacterCreationSite" target="_blank">Visit</a>
+        </div>
+        <div class="project-container">
+            <h2>Crime and Punishment Game</h2>
+            <div class="project-details-container">
+                <div class="project-image-container"><img src="img/crime-and-punishment.png"
+                        alt="Mind Flayer's Atheneum - Dungeons and Dragons website."></div>
+                <div class="project-description-container">
+                    <p>This is a project description Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                        qui tempora ipsam? Temporibus quos vel reprehenderit numquam maiores. Laborum eos velit
+                        aspernatur amet voluptas cumque accusantium optio iste nihil repudiandae?</p>
+                </div>
+            </div>
+            <a class="project-link" href="https://jeffbrin.github.io/CrimeAndPunishmentGame/" target="_blank">Visit</a>
+        </div>
+        <div class="project-container">
+            <h2>Pokemon Storage Application</h2>
+            <div class="project-details-container">
+                <div class="project-image-container"><img src="img/pokemon-storage-box.png"
+                        alt="Mind Flayer's Atheneum - Dungeons and Dragons website."></div>
+                <div class="project-description-container">
+                    <p>This is a project description Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                        qui tempora ipsam? Temporibus quos vel reprehenderit numquam maiores. Laborum eos velit
+                        aspernatur amet voluptas cumque accusantium optio iste nihil repudiandae?</p>
+                </div>
+            </div>
+            <a class="project-link" href="https://github.com/jeffbrin/PokemonStorageApplication" target="_blank">Visit</a>
+        </div>
+        <div class="project-container">
+            <h2>Mind Flayer's Atheneum</h2>
+            <div class="project-details-container">
+                <div class="project-image-container"><img src="img/mind-flayers-atheneum.png"
+                        alt="Mind Flayer's Atheneum - Dungeons and Dragons website."></div>
+                <div class="project-description-container">
+                    <p>This is a project description Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                        qui tempora ipsam? Temporibus quos vel reprehenderit numquam maiores. Laborum eos velit
+                        aspernatur amet voluptas cumque accusantium optio iste nihil repudiandae?</p>
+                </div>
+            </div>
+            <a class="project-link" href="https://github.com/jeffbrin/DungeonsAndDragons_CharacterCreationSite" target="_blank">Visit</a>
+        </div>
+    </section>
 </body>
 
 </html>
