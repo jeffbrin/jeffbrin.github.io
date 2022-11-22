@@ -1,4 +1,4 @@
-const projectLinks = $(".project-link");
+const projectLinks = $(".project-link a");
 
 let nextOpacity = 0;
 

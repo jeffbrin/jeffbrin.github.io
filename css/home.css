@@ -201,11 +201,12 @@ h1{
     justify-content: center;
     align-items: center;
     margin: 50px auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    width: 75%;
     margin-bottom: 500px;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
 }
 
 .project-container{
@@ -243,14 +244,28 @@ h1{
 
 
 .project-link{
+    grid-column: span 2;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.project-link a{
     color: white;
     text-decoration: none;
-    font-weight: bold;
     transition: color 750ms ease-in-out;
+    font-weight: bold;
+    
+    padding: 40px;
+}
+
+.project-description{
+    grid-area: 2 / 1 / span 1 / span 1;
 }
 
 .title-div{
     width: 100%;
+    grid-area: 1 / 1 / span 1 / span 2;
 }
 
 h2{
@@ -261,14 +276,21 @@ h2{
 }
 
 .project-image{
+    margin-top: 20px;
     height: 100%;
     width: 100%;
     /* max-width: 750px; */
     object-fit: contain;
-    border-radius: 0 0 10px 10px;
+    border-radius: 20px;
+    grid-area: 2 / 2 / span 1 / span 1;
 }
 
 @media screen and (max-width: 800px) {
-    body{
+    .project-description{
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+
+    .project-image{
+        grid-area: 3 / 1 / span 1 / span 2;
     }
   }
