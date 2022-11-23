@@ -9,11 +9,11 @@ const aboutSection = $("#about-section")[0];
 const skillsSection = $("#skills-section")[0];
 const timelineSection = $("#timeline-section")[0];
 
-aboutSection.style.left = "0";
+aboutSection.style.left = "-200vw";
 skillsSection.style.left = "-200vw";
 timelineSection.style.left = "-200vw";
-projectsSection.style.left = "-200vw";
-let currentSection = aboutSection;
+projectsSection.style.left = "0";
+let currentSection = projectsSection;
 function navigateToSection(event){
     let newSection;
     switch(event.target.innerText){

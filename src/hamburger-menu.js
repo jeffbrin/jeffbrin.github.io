@@ -2,7 +2,7 @@ const hamburgerButton = $("#pancake-menu-button");
 let navShown = false;
 const nav = $("nav")[0]
 const entryDiv = $("#entry-div")[0]
-const projectsButton = $("#entry-div a")[0]
+const heroButton = $(".hero-button")[0]
 const introSection = $("#intro-section")[0]
 
 const navItems = [...$("nav ul li a")];
@@ -11,6 +11,7 @@ navItems.forEach(link => {
 });
 
 hamburgerButton[0].addEventListener('click', toggleNav);
+heroButton.addEventListener('click', toggleNav);
 let cancelBlinkOutAnimation = false;
 let cancelBlinkInAnimation = false;
 
@@ -29,7 +30,7 @@ function toggleNav(){
             nav.style.top = "-1000vh";
         }, 1000);
         
-        projectsButton.style.top = "50vh";
+        heroButton.style.top = "50vh";
     }
     else{
         // Blink right next to the screen then smoothly transition
@@ -45,7 +46,7 @@ function toggleNav(){
             nav.style.top = 0;
         }, 10);
         
-        projectsButton.style.top = "-100vh";
+        heroButton.style.top = "-100vh";
 
     }
 

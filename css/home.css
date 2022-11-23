@@ -206,12 +206,42 @@ nav ul li a{
 }
 
 /* Projects Section */
+.partner-link{
+    color: #fff;
+}
+
 #projects-section{
     width: 100%;
 }
 
 h1{
     margin-top: 2rem;
+}
+
+h3{
+    margin-top: 40px;
+}
+
+.project-description p{
+    margin-top: 20px;
+}
+
+.project-description ul{
+    margin-top: 10px;
+    gap: 20px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.project-description ul li{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
 }
 
 .project-info-container{
@@ -373,7 +403,7 @@ h2{
 
 .instrument-span{
     position: relative;
-    transition: all 50ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 .music-note{
@@ -415,6 +445,49 @@ h2{
     }
   }
 
+/* Skills Section */
+#skills-list{
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.skill-card{
+    width: 75%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.skill-card img{
+    width: 50%;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.skill-card p{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    #skills-list{
+        grid-template-columns: auto auto auto;
+    }
+    .skill-card:nth-of-type(2n){
+        margin: 40px auto;
+    }
+
+}
+
 @media screen and (max-width: 700px) {
     #external-links{
         flex-direction: column;
@@ -430,5 +503,15 @@ h2{
 @media screen and (max-width: 600px) {
     #instruments-parent span:nth-of-type(1){
         font-size: 0;
+    }
+
+    #skills-list{
+        grid-template-columns: auto;
+    }
+    .skill-card:nth-of-type(2n){
+        margin: auto
+    }
+    .skill-card{
+        margin: auto
     }
 }
