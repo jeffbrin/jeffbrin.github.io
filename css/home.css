@@ -359,12 +359,28 @@ h2{
     margin: 50px auto;
 }
 
-.instrument-span:hover{
-    cursor: pointer;
-    font-size: 15rem;
-    user-select: none;
+#instruments-parent{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 400px;
+    flex-wrap: wrap;
 }
 
+.instrument-span{
+    position: relative;
+    transition: all 50ms ease-in-out;
+}
+
+.music-note{
+    position: absolute;
+}
+
+.instrument-span:hover{
+    cursor: pointer;
+    font-size: 12rem;
+    user-select: none;
+}
 
 @media screen and (max-width: 1000px) {
     .project-description{
@@ -373,5 +389,9 @@ h2{
 
     .project-image{
         grid-area: 3 / 1 / span 1 / span 2;
+    }
+
+    #instruments-parent span:nth-of-type(2), #instruments-parent span:nth-of-type(3){
+        font-size: 0;
     }
   }

@@ -21,7 +21,7 @@ function toggleNav(){
         cancelBlinkInAnimation = true;
         nav.style.transition = "top 1s ease-in";
         nav.style.top = "-100vh";
-        
+
         setTimeout(() => {
             if (cancelBlinkOutAnimation)
                 return;
@@ -49,7 +49,6 @@ function toggleNav(){
 
     }
 
-    
     changeHamburgerMenuAppearance(navShown);
     navShown = !navShown;
 }
