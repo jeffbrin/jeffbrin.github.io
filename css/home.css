@@ -47,6 +47,7 @@ a:hover + .rectangle .path{
 }
 
 a:hover + .rectangle + .highlighter{
+    z-index: 1;
     background: rgba(0, 0, 0, 0.4);
     transition: width 1s ease-in-out;
     width: calc(100% - 8px);
@@ -88,7 +89,10 @@ nav ul li{
     
 }
 
+
 nav ul li a{
+    z-index: 2;
+    position: relative;
     font-size: 3rem;
     text-decoration: none;
     color: white;
@@ -419,5 +423,12 @@ h2{
 
     #github-logo{
         margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #instruments-parent span:nth-of-type(1){
+        font-size: 0;
     }
 }
