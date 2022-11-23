@@ -399,3 +399,14 @@ h2{
         gap: 10px;
     }
   }
+
+@media screen and (max-width: 700px) {
+    #external-links{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #github-logo{
+        margin-right: 0;
+    }
+}
