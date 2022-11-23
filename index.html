@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <script src="./src/hamburger-menu.js" defer></script>
     <script src="./src/project-links.js" defer></script>
+    <script src="./src/navigation.js" defer></script>
 </head>
 
 <body>
@@ -33,17 +34,17 @@
                     </svg>
                     <div class="highlighter"></div>
                 </li>
-                <li><a href="./about.html">About</a><svg class="rectangle">
+                <li><a href="#about-section">About</a><svg class="rectangle">
                         <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
                     </svg>
                     <div class="highlighter"></div>
                 </li>
-                <li><a href="./skills.html">Skills</a><svg class="rectangle">
+                <li><a href="#skills-section">Skills</a><svg class="rectangle">
                         <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
                     </svg>
                     <div class="highlighter"></div>
                 </li>
-                <li><a href="./timeline.html">Timeline</a><svg class="rectangle">
+                <li><a href="#timeline-section">Timeline</a><svg class="rectangle">
                         <rect class="path" fill="transparent" width="200px" height="20px" stroke-width="4px">
                     </svg>
                     <div class="highlighter"></div>
@@ -71,11 +72,11 @@
         <img class="bg-img" src="./img/TechyBackground.gif"
             alt="tech background">
         <div id="entry-div">
-            <a class="hero-button" href="#projects-section">To Projects</a>
+            <a class="hero-button" href="#projects-section">To Content</a>
         </div>
     </section>
     <!-- Projects -->
-    <section id="projects-section">
+    <section class="content-section" id="projects-section">
         <h1>Projects</h1>
         <!-- Mindflayer's Atheneum -->
         <div class="project-container">
@@ -184,8 +185,20 @@
         </div>
     </section>
 
-    <section id="about-section">
-
+    <section class="content-section" id="about-section">
+        <h1>About Me</h1>
+        <img id="headshot" src="img/me.jfif">
+        <div id="external-links">
+            <a id="github-logo" href="https://github.com/jeffbrin" target="_blank"><img src="./img/github-logo.png"></a>
+            <a href="https://www.linkedin.com/in/jeffrey-bringolf-474b54205/" target="_blank"><img src="./img/linkedin-logo.png"></a>
+            <a href="https://www.youtube.com/c/JoffLobster" target="_blank"><img src="./img/youtube-logo.webp"></a>
+        </div>
+    </section>
+    <section class="content-section" id="skills-section">
+        <p>skills</p>
+    </section>
+    <section class="content-section" id="timeline-section">
+        <p>timeline</p>
     </section>
 </body>
 
