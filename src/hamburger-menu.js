@@ -11,14 +11,40 @@ navItems.forEach(link => {
 });
 
 hamburgerButton[0].addEventListener('click', toggleNav);
+let cancelBlinkOutAnimation = false;
+let cancelBlinkInAnimation = false;
 
 function toggleNav(){
     if(navShown){
-        nav.style.top = "-110vh";
+        // Transition smoothly to the top, then after the transition very quickly blink very far away
+        cancelBlinkOutAnimation = false;
+        cancelBlinkInAnimation = true;
+        nav.style.transition = "top 1s ease-in";
+        nav.style.top = "-100vh";
+        
+        setTimeout(() => {
+            if (cancelBlinkOutAnimation)
+                return;
+            nav.style.transition = "top 1ms linear";
+            nav.style.top = "-1000vh";
+        }, 1000);
+        
         projectsButton.style.top = "50vh";
     }
     else{
-        nav.style.top = 0;
+        // Blink right next to the screen then smoothly transition
+        cancelBlinkOutAnimation = true;
+        cancelBlinkInAnimation = false;
+        nav.style.transition = "top 1ms linear";
+        nav.style.top = "-100vh";
+
+        setTimeout(() => {
+            if (cancelBlinkInAnimation)
+                return;
+            nav.style.transition = "top 1s ease-out";
+            nav.style.top = 0;
+        }, 10);
+        
         projectsButton.style.top = "-100vh";
 
     }

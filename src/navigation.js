@@ -9,7 +9,7 @@ const aboutSection = $("#about-section")[0];
 const skillsSection = $("#skills-section")[0];
 const timelineSection = $("#timeline-section")[0];
 
-// aboutSection.style.left = "-105vw";
+aboutSection.style.left = "0";
 skillsSection.style.left = "-200vw";
 timelineSection.style.left = "-200vw";
 projectsSection.style.left = "-200vw";
