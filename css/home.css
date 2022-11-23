@@ -363,7 +363,7 @@ h2{
     display: flex;
     justify-content: center;
     gap: 20px;
-    height: 400px;
+    height: 15rem;
     flex-wrap: wrap;
 }
 
@@ -393,5 +393,9 @@ h2{
 
     #instruments-parent span:nth-of-type(2), #instruments-parent span:nth-of-type(3){
         font-size: 0;
+    }
+
+    #instruments-parent{
+        gap: 10px;
     }
   }
