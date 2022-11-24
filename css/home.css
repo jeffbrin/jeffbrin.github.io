@@ -507,9 +507,14 @@ h2{
     margin-top: 50px;
 }
 
-.timeline-item svg, .timeline-item svg rect{
+.timeline-item svg{
     height: 5px;
+    display: inline-block;
     width: 100%;
+}
+
+.timeline-item svg rect{
+    height: 5px;
 }
 
 .timeline-item{
@@ -517,6 +522,7 @@ h2{
     top: 0;
     width: 20%;
     left: 30%;
+    transition: all 1s ease-in-out;
 }
 
 .timeline-image{
