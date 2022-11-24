@@ -495,6 +495,50 @@ h2{
     margin-top: 200px;
 }
 
+/* Timeline */
+#timeline{
+    position: inherit;
+    margin: auto;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.timeline-item svg, .timeline-item svg rect{
+    height: 5px;
+    width: 100%;
+}
+
+.timeline-item{
+    position: absolute;
+    top: 0;
+    width: 20%;
+    left: 30%;
+}
+
+.timeline-image{
+    position: absolute;
+    width: 200px;
+    object-fit: contain;
+    left: -200px;
+    top: -100px;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+}
+
+/* Every second timeline item */
+.timeline-item:nth-of-type(2n){
+    left: calc(50% + 2.5px);
+}
+
+.timeline-item:nth-of-type(2n) img{
+    right: -200px;
+    left: auto;
+}
+
+.optional-timeline-info{
+    transition: all 0.5s linear;
+}
+
 @media screen and (max-width: 800px) {
 
     #skills-list{
@@ -516,6 +560,27 @@ h2{
         margin-right: 0;
     }
 
+    .optional-timeline-info{
+        font-size: 0;
+    }
+
+    /* Timeline Stuff */
+    .timeline-image{
+        width: 100px;
+        left: -100px;
+        top: -50px;
+        border-radius: 50%;
+    }
+    
+    /* Every second timeline item */
+    .timeline-item:nth-of-type(2n){
+        left: calc(50% + 2.5px);
+    }
+    
+    .timeline-item:nth-of-type(2n) img{
+        right: -100px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -532,4 +597,6 @@ h2{
     .skill-card{
         margin: auto
     }
+
+    
 }

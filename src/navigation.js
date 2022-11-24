@@ -11,9 +11,9 @@ const timelineSection = $("#timeline-section")[0];
 
 aboutSection.style.left = "-200vw";
 skillsSection.style.left = "-200vw";
-timelineSection.style.left = "-200vw";
-projectsSection.style.left = "0";
-let currentSection = projectsSection;
+timelineSection.style.left = "0vw";
+projectsSection.style.left = "-200vw";
+let currentSection = timelineSection;
 function navigateToSection(event){
     let newSection;
     switch(event.target.innerText){
