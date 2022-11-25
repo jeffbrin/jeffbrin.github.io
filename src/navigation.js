@@ -14,6 +14,9 @@ skillsSection.style.left = "-200vw";
 timelineSection.style.left = "-200vw";
 projectsSection.style.left = "0vw";
 let currentSection = projectsSection;
+
+if (localStorage.getItem("section"))
+    navigateToSection(JSON.parse(localStorage.getItem("section")));
 function navigateToSection(event){
     let newSection;
     switch(event.target.innerText){
@@ -30,7 +33,7 @@ function navigateToSection(event){
             newSection = timelineSection;
             break;
         default:
-            return
+            return;
     }
 
     currentSection.style.transition = "left 1s ease-in"
@@ -38,4 +41,6 @@ function navigateToSection(event){
     newSection.style.transition = "left 0.5s ease-out"
     newSection.style.left = "0";
     currentSection = newSection;
+
+    localStorage.setItem("section", `{"target": {"innerText": "${event.target.innerText}"}}`);
 }
